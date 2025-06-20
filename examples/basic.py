@@ -17,18 +17,18 @@ app.add_middleware(
     allow_headers=["*"],
     expose_headers=[
         "Location",
-        "Upload-Offset",
         "Tus-Resumable",
         "Tus-Version",
         "Tus-Extension",
         "Tus-Max-Size",
-        "Upload-Expires",
+        "Upload-Offset",
         "Upload-Length",
+        "Upload-Expires",
     ],
 )
 
 # serve an html frontend from the static folder
-app.mount("/static", StaticFiles(directory="examples/static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 # use completion hook to log uploads

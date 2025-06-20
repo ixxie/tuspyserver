@@ -24,7 +24,6 @@ app.add_middleware(
         "Upload-Offset",
         "Upload-Length",
         "Upload-Expires",
-        "Upload-Length",
     ],
 )
 
